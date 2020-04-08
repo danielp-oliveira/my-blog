@@ -31,7 +31,7 @@ PostItem.prototypes = {
   background: PropTyles.string,
   category: PropTyles.string.isRequired,
   date: PropTyles.string.isRequired,
-  timeToRead: PropTyles.string.isRequired,
+  timeToRead: PropTyles.number.isRequired,
   title: PropTyles.string.isRequired,
   description: PropTyles.string.isRequired,
 }
