@@ -2,8 +2,8 @@ import React from "react"
 
 import * as S from "./styled"
 
-import { Actions as MenuBarActions } from "./Actions"
-import { Links as MenuBarLinks } from "./Links"
+import MenuBarActions from "./Actions"
+import MenuBarLinks from "./Links"
 
 const MenuBar = () => (
   <S.MenuBarWrapper>

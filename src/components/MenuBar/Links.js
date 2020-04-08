@@ -1,5 +1,8 @@
+import React from "react"
 import Icons from "./Icons"
 import { links } from "./content"
+
+import * as S from "./styled"
 
 const Links = () => {
   return links.map((link, i) => {

@@ -1,5 +1,8 @@
+import React from "react"
 import Icons from "./Icons"
 import { actions } from "./content"
+
+import * as S from "./styled"
 
 const Actions = () => {
   return actions.map((action, i) => {
