@@ -2,34 +2,16 @@ import React from "react"
 
 import * as S from "./styled"
 
-import Icons from "./Icons"
-import { actions, links } from "./content"
+import { Actions as MenuBarActions } from "./Actions"
+import { Links as MenuBarLinks } from "./Links"
 
 const MenuBar = () => (
   <S.MenuBarWrapper>
     <S.MenuBarGroup>
-      {links.map((link, i) => {
-        const Icon = Icons[link.icon]
-
-        return (
-          <S.MenuBarLink to={link.url} title={link.title} key={i}>
-            <S.MenuBarItem>
-              <Icon />
-            </S.MenuBarItem>
-          </S.MenuBarLink>
-        )
-      })}
+      <MenuBarLinks />
     </S.MenuBarGroup>
     <S.MenuBarGroup>
-      {actions.map((action, i) => {
-        const Icon = Icons[action.icon]
-
-        return (
-          <S.MenuBarItem title={action.title} key={i}>
-            <Icon />
-          </S.MenuBarItem>
-        )
-      })}
+      <MenuBarActions />
     </S.MenuBarGroup>
   </S.MenuBarWrapper>
 )
