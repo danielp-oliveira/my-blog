@@ -12,7 +12,7 @@ const PostItem = ({
   title,
   description,
 }) => (
-  <S.PostItemLink to={slug}>
+  <S.PostItemLink to={slug} cover direction="right" bg="#16202c" duration={0.6}>
     <S.PostItemWrapper>
       <S.PostITemTag background={background}>{category}</S.PostITemTag>
       <S.PostItemInfo>

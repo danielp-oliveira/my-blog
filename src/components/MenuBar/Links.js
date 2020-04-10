@@ -21,7 +21,15 @@ const Links = () => {
     const Icon = Icons[link.icon]
 
     return (
-      <S.MenuBarLink to={link.url} title={link.title} key={i}>
+      <S.MenuBarLink
+        to={link.url}
+        title={link.title}
+        key={i}
+        cover
+        direction="right"
+        bg="#16202c"
+        duration={0.6}
+      >
         <S.MenuBarItem>
           <Icon />
         </S.MenuBarItem>
