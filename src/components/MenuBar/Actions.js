@@ -27,20 +27,26 @@ const Actions = () => {
       },
     },
     {
+      className: "display",
       icon: isListMode ? "Grid" : "List",
       title: "Mudar visualização",
       onClick: () => {
         window.__setPreferredDisplay(isListMode ? "grid" : "list")
       },
     },
-    { icon: "Home", title: "Ir para o urlpo" },
+    { icon: "Arrow", title: "Ir para o topo" },
   ]
 
   return actions.map((action, i) => {
     const Icon = Icons[action.icon]
 
     return (
-      <S.MenuBarItem title={action.title} key={i} onClick={action.onClick}>
+      <S.MenuBarItem
+        title={action.title}
+        key={i}
+        onClick={action.onClick}
+        className={action.className}
+      >
         <Icon />
       </S.MenuBarItem>
     )
