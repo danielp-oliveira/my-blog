@@ -1,10 +1,22 @@
 import React from "react"
 import Icons from "./Icons"
-import { links } from "./content"
 
 import * as S from "./styled"
 
 const Links = () => {
+  const links = [
+    {
+      icon: "Home",
+      title: "Voltar para Home",
+      url: "/",
+    },
+    {
+      icon: "Search",
+      title: "Pesquisar",
+      url: "/search/",
+    },
+  ]
+
   return links.map((link, i) => {
     const Icon = Icons[link.icon]
 
