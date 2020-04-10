@@ -1,6 +1,8 @@
 import React from "react"
 import Icons from "./Icons"
 
+import getThemeColor from "../../utils/getThemeColor"
+
 import * as S from "./styled"
 
 const Links = () => {
@@ -27,7 +29,7 @@ const Links = () => {
         key={i}
         cover
         direction="right"
-        bg="#16202c"
+        bg={getThemeColor()}
         duration={0.6}
       >
         <S.MenuBarItem>

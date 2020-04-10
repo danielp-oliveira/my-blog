@@ -20,6 +20,7 @@ const Actions = () => {
 
   const actions = [
     {
+      className: theme,
       icon: "Light",
       title: "Mudar o tema",
       onClick: () => {
