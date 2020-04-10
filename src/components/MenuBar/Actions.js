@@ -5,12 +5,17 @@ import * as S from "./styled"
 
 const Actions = () => {
   const [theme, setTheme] = useState(null)
+  const [display, setDisplay] = useState(null)
 
   const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
 
   useEffect(() => {
     setTheme(window.__theme)
+    setDisplay(window.__display)
+
     window.__onThemeChange = () => setTheme(window.__theme)
+    window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
 
   const actions = [
@@ -21,7 +26,13 @@ const Actions = () => {
         window.__setPreferredTheme(isDarkMode ? "light" : "dark")
       },
     },
-    { icon: "Grid", title: "Mudar visualização" },
+    {
+      icon: isListMode ? "Grid" : "List",
+      title: "Mudar visualização",
+      onClick: () => {
+        window.__setPreferredDisplay(isListMode ? "grid" : "list")
+      },
+    },
     { icon: "Home", title: "Ir para o urlpo" },
   ]
 
